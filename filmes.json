@@ -1,0 +1,81 @@
+{
+    "filmes": [
+        {
+            "titulo": "Vingadores: Guerra Infinita",
+            "resumo": "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua vontade maléfica sobre a realidade.",
+            "generos": [
+                { "genero": "Aventura" },
+                { "genero": "Ação" },
+                { "genero": "Ficção Científica" }
+            ],
+            "elenco": [
+                { "ator": "Robert Downey Jr." },
+                { "ator": "Chris Hemsworth" },
+                { "ator": "Mark Ruffalo" },
+                { "ator": "Scarlett Johansson" },
+                { "ator": "Chris Evans" }
+            ],
+            "diretor": "Anthony Russo, Joe Russo",
+            "roteiro": "Christopher Markus, Stephen McFeely",
+            "duracao": "2h 29min",
+            "orcamento": "$316–400 milhões",
+            "dataLancamento": {
+                "data": "26 de abril de 2018",
+                "pais": "Brasil"
+            },
+            "paisOrigem": "Estados Unidos",
+            "linguaOriginal": "Inglês",
+            "notaIMDB": 8.4
+        },
+        {
+            "titulo": "Onde Está Segunda",
+            "resumo": "Em um futuro distópico onde a superpopulação é combatida com uma política draconiana de filho único, sete irmãs gêmeas, todas interpretadas por Noomi Rapace, tentam sobreviver ao esconderijo. Elas precisam compartilhar uma única identidade para evitar serem capturadas pelas autoridades.",
+            "generos": [
+                { "genero": "Ficção Científica" },
+                { "genero": "Suspense" }
+            ],
+            "elenco": [
+                { "ator": "Noomi Rapace" },
+                { "ator": "Glenn Close" },
+                { "ator": "Willem Dafoe" }
+            ],
+            "diretor": "Tommy Wirkola",
+            "roteiro": "Max Botkin, Kerry Williamson",
+            "duracao": "2h 3min",
+            "orcamento": "$20 milhões",
+            "dataLancamento": {
+                "data": "30 de agosto de 2017",
+                "pais": "França"
+            },
+            "paisOrigem": "Reino Unido",
+            "linguaOriginal": "Inglês",
+            "notaIMDB": 6.9
+        },
+        {
+            "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
+            "resumo": "Um jovem hobbit, Frodo, é encarregado de uma tarefa épica: destruir um anel poderoso antes que ele caia nas mãos do maligno Sauron. Com a ajuda de amigos e aliados, Frodo embarca em uma perigosa jornada pela Terra Média.",
+            "generos": [
+                { "genero": "Aventura" },
+                { "genero": "Fantasia" },
+                { "genero": "Ação" }
+            ],
+            "elenco": [
+                { "ator": "Elijah Wood" },
+                { "ator": "Ian McKellen" },
+                { "ator": "Viggo Mortensen" },
+                { "ator": "Orlando Bloom" }
+            ],
+            "diretor": "Peter Jackson",
+            "roteiro": "Fran Walsh, Philippa Boyens, Peter Jackson",
+            "duracao": "2h 58min",
+            "orcamento": "$93 milhões",
+            "dataLancamento": {
+                "data": "19 de dezembro de 2001",
+                "pais": "Estados Unidos"
+            },
+            "paisOrigem": "Nova Zelândia",
+            "linguaOriginal": "Inglês",
+            "notaIMDB": 8.8
+        }
+    ]
+}

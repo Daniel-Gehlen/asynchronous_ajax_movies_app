@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Requisições Assíncronas</title>
+		
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+		<script>
+
+			function requisitarPagina(url) {
+				let conteudo = document.getElementById('conteudo');
+				let botoes = document.querySelectorAll('.btn-primary');
+
+				// Limpar conteúdo e exibir o GIF de loading
+				conteudo.innerHTML = '';
+				
+				if (!document.getElementById('loading')) {
+					let imgLoading = document.createElement('img');
+					imgLoading.id = 'loading';
+					imgLoading.src = 'loading.gif';
+					imgLoading.className = 'rounded mx-auto d-block';
+					conteudo.appendChild(imgLoading);
+				}
+
+				// Desabilitar botões enquanto a requisição está sendo processada
+				botoes.forEach(btn => btn.disabled = true);
+
+				let ajax = new XMLHttpRequest();
+				ajax.open('GET', url);
+
+				ajax.onreadystatechange = () => {
+					if (ajax.readyState == 4) {
+						if (ajax.status == 200) {
+							// Remover o GIF de loading e mostrar o conteúdo
+							conteudo.innerHTML = ajax.responseText;
+						} else {
+							// Exibir uma mensagem de erro amigável
+							conteudo.innerHTML = '<p class="text-danger">Erro ao carregar a página. Por favor, tente novamente mais tarde.</p>';
+						}
+
+						// Habilitar os botões novamente após o término da requisição
+						botoes.forEach(btn => btn.disabled = false);
+					}
+				};
+
+				// Tratar erro de rede (ex: perda de conexão)
+				ajax.onerror = () => {
+					conteudo.innerHTML = '<p class="text-danger">Falha de conexão. Verifique sua internet e tente novamente.</p>';
+					botoes.forEach(btn => btn.disabled = false);
+				};
+
+				ajax.send();
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-light bg-light mb-4">
+	      <div class="container">
+	        <div class="navbar-brand mb-0 h1">
+	        	<h3>Requisições Síncronas e Assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row mb-2 d-flex justify-content-center">
+	    		<div class="col-sm-2 mb-2">
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.php')">Página 1</a>
+	    		</div>
+	    		<div class="col-sm-2 mb-2">
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.html')">Página 2</a>
+	    		</div>
+	    		<div class="col-sm-2 mb-2">
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
+	    		</div>
+	    	</div>
+	    	
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+
+		    	<div class="col-md-10" id="conteudo"></div>
+		    		
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>

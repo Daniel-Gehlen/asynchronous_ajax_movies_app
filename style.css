@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+	display: flex;
+    flex-direction: column;
+}
+
+.navbar-custom {
+    background-color: #343a40;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #28a745;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.container {
+    flex: 1; /* Permite que o conteúdo expanda para ocupar o espaço disponível */
+}
+
+footer {
+    position: relative; /* Mudado para relativo */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: white;
+	margin-top: auto; /* Empurra o footer para a parte inferior */
+
+}
+
+#conteudo {
+    min-height: 60vh; /* Altura mínima para o conteúdo */
+    padding-bottom: 50px; /* Espaço para o footer */
+}
